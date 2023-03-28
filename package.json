@@ -1,0 +1,19 @@
+{
+  "name": "a-whole-lotta-nothing",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^3.2.0",
+    "@nuxtjs/i18n": "^8.0.0-beta.10",
+    "nuxt": "^3.3.2",
+    "nuxt-icon": "^0.3.3",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.2"
+  }
+}
