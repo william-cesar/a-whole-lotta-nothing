@@ -1,20 +1,3 @@
-<script setup>
-const ICONS = {
-  name: {
-    en: 'cif:us',
-    pt: 'cif:br'
-  },
-  size: '24',
-}
-
-const { locale, locales, setLocale } = useI18n();
-
-const availableLocales = computed(() => {
-  const valuesFromLocales = locales.value;
-  return valuesFromLocales.filter(i => i.code !== locale.value);
-})
-
-</script>
 <template>
   <button
     class="locale-change-btn"
@@ -23,12 +6,23 @@ const availableLocales = computed(() => {
     @click="setLocale(availableLocales[0].code)"
   >
     <Icon
-      :name="ICONS.name[availableLocales[0].code]"
-      :size="ICONS.size"
+      :name="ICON_PROPS.name[availableLocales[0].code]"
+      :size="ICON_PROPS.size"
     />
   </button>
   <p>{{ $t('welcome') }}</p>
 </template>
+
+<script setup>
+import { ICON_PROPS } from './constants';
+
+const { locale, locales, setLocale } = useI18n();
+
+const availableLocales = computed(() => {
+  const valuesFromLocales = locales.value;
+  return valuesFromLocales.filter(i => i.code !== locale.value);
+})
+</script>
 
 <style lang="scss">
 .locale-change-btn {
