@@ -39,13 +39,13 @@ const isDarkModeOn = computed(() => {
   return !colorMode.unknown && colorMode.value !== 'light'
 })
 
-const emit = defineEmits(['changeColorMode'])
+const emit = defineEmits(['change-color-mode'])
 const changeColorMode = (evt) => {
   const pageColorMode = evt.target.checked
     ? COLOR_SCHEME.dark
     : COLOR_SCHEME.light;
 
-  emit('changeColorMode', pageColorMode);
+  emit('change-color-mode', pageColorMode);
 }
 
 </script>

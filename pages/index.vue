@@ -1,5 +1,5 @@
 <template>
-  <ThemeChange @changeColorMode="changeColorMode" />
+  <ThemeChange @change-color-mode="changeColorMode" />
   <LocaleChange />
 </template>
 
