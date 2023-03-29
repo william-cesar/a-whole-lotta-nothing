@@ -4,36 +4,43 @@ import { EN_US } from './languages/en-US';
 
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/i18n',
     'nuxt-icon',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/eslint-module',
+    ['@nuxtjs/i18n', { 
+      locales: [
+        {
+          code: 'en',
+          name: 'English'
+        },
+        {
+          code: 'pt',
+          name: 'Português'
+        },
+      ],
+      vueI18n: {
+        legacy: false,
+        locale: 'en',
+        messages: 
+        {
+          en: EN_US,
+          pt: PT_BR
+        }
+      }}
+    ],
+
+    ['@nuxtjs/color-mode', 
+      {
+        preference: 'system',
+        fallback: 'light'
+      }
+    ],
   ],
   css: ['@/assets/styles/main.scss'],
-    vite: {
-      css: {
-        preprocessorOptions: {
-          sass: { additionalData: '@import "@/assets/styles/main.scss"' },
-        },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        sass: { additionalData: '@import "@/assets/styles/main.scss"' },
       },
     },
-  i18n: {
-    locales: [
-      {
-        code: 'en',
-        name: 'English'
-      },
-      {
-        code: 'pt',
-        name: 'Português'
-      },
-    ],
-    vueI18n: {
-      legacy: false,
-      locale: 'en',
-      messages: {
-        en: EN_US,
-        pt: PT_BR
-      }
-    }
   },
 })
