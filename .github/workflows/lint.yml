@@ -3,7 +3,9 @@ name: Run Linters
 on:
   pull_request:
     types: [opened]
-
+  push:
+    branches:
+      - dev
 jobs:
   eslint:
     runs-on: Github-hosted
