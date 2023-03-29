@@ -8,7 +8,7 @@ on:
       - main
 jobs:
   eslint:
-    runs-on: Github-hosted
+    runs-on: github-hosted
     container:
       image: node:16-alpine3.12
 
