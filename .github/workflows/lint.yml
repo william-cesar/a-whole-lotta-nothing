@@ -2,13 +2,14 @@ name: Run Linters
 
 on:
   pull_request:
-    types: [opened]
+    branches: 
+      - main
   push:
     branches:
       - main
 jobs:
   eslint:
-    runs-on: github-hosted
+    runs-on: ubuntu-latest
     container:
       image: node:16-alpine3.12
 
