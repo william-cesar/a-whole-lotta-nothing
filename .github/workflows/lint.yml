@@ -5,7 +5,7 @@ on:
     types: [opened]
   push:
     branches:
-      - dev
+      - main
 jobs:
   eslint:
     runs-on: Github-hosted
