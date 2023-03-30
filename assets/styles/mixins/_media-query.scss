@@ -1,0 +1,36 @@
+$screen-xsmall: 539px;
+$screen-small: 767px;
+$screen-medium: 1023px;
+$screen-large: 1279px;
+$screen-xlarge: 1599px;
+
+
+$mediaQueryList: (
+  'screen-xsmall': (
+    max-width: $screen-xsmall,
+  ),
+  'screen-small': (
+    max-width: $screen-small,
+  ),
+  'screen-medium': (
+    max-width: $screen-medium,
+  ),
+  'screen-large': (
+    max-width: $screen-large,
+  ),
+  'screen-xlarge': (
+    min-width: $screen-xlarge,
+  ),
+) !default;
+
+@mixin mediaQuery($mediaQuery) {
+  $selected-media: map-get($mediaQueryList, $mediaQuery);
+
+  @if $selected-media {
+    @media #{inspect($selected-media)} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$mediaQuery}`. Please make sure it is defined in `$mediaQuery` map.';
+  }
+}

@@ -1,2 +1,14 @@
-@import './settings/index';
 @import './tokens/index';
+@import './mixins/index';
+
+body {
+  font-family: $font-family-1;
+  background-color: $background-base;
+  color: $text-base;
+  transition: background-color $animation-speed-slow;
+}
+
+.dark-mode body {
+  background-color: $background-base-inverse;
+  color: $text-base-inverse;
+}
