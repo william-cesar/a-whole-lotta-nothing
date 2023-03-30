@@ -2,7 +2,7 @@
   <button
     class="locale-change-btn"
     data-testid="localeChangeBtn"
-    :title="$t('translate_to', { lang: availableLocales[0].name })"
+    :title="$t('navbar.translate_to', { lang: availableLocales[0].name })"
     @click="setLocale(availableLocales[0].code)"
   >
     <Icon
@@ -10,7 +10,6 @@
       :size="ICON_PROPS.size"
     />
   </button>
-  <p>{{ $t('welcome') }}</p>
 </template>
 
 <script setup>

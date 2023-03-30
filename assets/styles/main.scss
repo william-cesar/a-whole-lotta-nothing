@@ -1,6 +1,13 @@
 @import './tokens/index';
 @import './mixins/index';
 
+* {
+  box-sizing: border-box;
+  padding: $spacing-0;
+  margin: $spacing-0;
+}
+
+
 body {
   font-family: $font-family-1;
   background-color: $background-base;
@@ -11,4 +18,8 @@ body {
 .dark-mode body {
   background-color: $background-base-inverse;
   color: $text-base-inverse;
+}
+
+.page {
+  @include pagePadding();
 }
