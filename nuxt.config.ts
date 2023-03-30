@@ -5,7 +5,9 @@ import { EN_US } from './languages/en-US';
 export default defineNuxtConfig({
   modules: [
     'nuxt-icon',
-    '@nuxtjs/eslint-module',
+    ['@nuxtjs/eslint-module', {
+      lintOnStart: false,
+    }],
     ['@nuxtjs/i18n', { 
       locales: [
         {
