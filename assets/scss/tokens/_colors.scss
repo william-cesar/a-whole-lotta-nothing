@@ -1,0 +1,42 @@
+// :root{
+//   --dark-blue-100: #243746;
+//   --dark-blue-200: #0e2233;
+//   --dark-blue-300: #091a28;
+//   --dark-blue-400: #071521;
+//   --dark-blue-500: #1c2025;
+
+//   /* --- */
+//   --white-100: #fff;
+//   --white-200: #efefef;
+//   --white-300: #fdf9f3;
+//   --white-400: #f6fcfa;
+
+//   /* --- */
+//   --gray-100: #f3f3f3;
+//   --gray-200: #eaeaea;
+//   --gray-300: #ddd;
+//   --gray-400: #848585;
+  
+//   /* --- */
+//   --green-100: #41b38a;
+//   --green-400: #1c2025;
+// }
+
+
+// Light mode
+$color-base: #243746;
+$color-primary: #1c2025;
+$color-secondary: #0e2233;
+$background-base: #efefef;
+$background-secondary: #fff;
+$border-color: #ddd;
+$text-base: #1c2025;
+
+// Dark mode
+$color-base-inverse: #f6fcfa;
+$color-primary-inverse: #41b38a;
+$color-secondary-inverse: #fdf9f3;
+$background-base-inverse: #091a28;
+$background-secondary-inverse: #071521;
+$border-color-inverse: #848585;
+$text-base-inverse: #f3f3f3;
