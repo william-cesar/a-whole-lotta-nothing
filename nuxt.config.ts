@@ -4,6 +4,7 @@ import { EN_US } from './languages/en-US';
 
 export default defineNuxtConfig({
   app: {
+    baseURL: '/a-whole-lotta-nothing/',
     head: {
       title: 'A Whole Lotta Nothing',
     }
