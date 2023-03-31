@@ -29,3 +29,7 @@ body {
   background-color: $background-base-inverse;
   color: $text-base-inverse;
 }
+
+.page {
+  @include page-padding();
+}
