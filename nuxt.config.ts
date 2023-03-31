@@ -4,7 +4,6 @@ import { EN_US } from './languages/en-US';
 
 export default defineNuxtConfig({
   app: {
-    baseURL: '/a-whole-lotta-nothing/',
     head: {
       title: 'A Whole Lotta Nothing',
     }
@@ -43,7 +42,7 @@ export default defineNuxtConfig({
   vite: {
     css: {
       preprocessorOptions: {
-        scss: { additionalData: '@import "@/assets/styles/main.scss";' },
+        scss: { additionalData: '@import "@/public/styles/main.scss";' },
       },
     },
   },
