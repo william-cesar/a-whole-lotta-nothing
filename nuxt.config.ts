@@ -3,6 +3,11 @@ import { PT_BR } from './languages/pt-BR';
 import { EN_US } from './languages/en-US';
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'A Whole Lotta Nothing',
+    }
+  },
   modules: [
     'nuxt-icon',
     ['@nuxtjs/eslint-module', {
@@ -31,10 +36,7 @@ export default defineNuxtConfig({
     ],
 
     ['@nuxtjs/color-mode', 
-      {
-        preference: 'system',
-        fallback: 'light'
-      }
+      { preference: 'light' }
     ],
   ],
   vite: {

@@ -12,7 +12,7 @@
     <label
       class="toggle"
       data-testid="themeChangeToggle-label"
-      :title="isDarkModeOn ? $t('dark_mode') : $t('light_mode')"
+      :title="isDarkModeOn ? $t('navbar.dark_mode') : $t('navbar.light_mode')"
     >
       <input
         type="checkbox"
@@ -57,12 +57,12 @@ const changeColorMode = (evt) => {
 }
 
 .theme-change-toggle svg.icon > path {
-  fill: $border-color;
+  fill: $text-base-inverse;
 }
 
 .theme-change-toggle svg.icon.dark--active > path,
 .theme-change-toggle svg.icon.light--active > path {
-  fill: $color-primary-inverse;
+  fill: $color-base;
 }
 
 .theme-change-toggle > .toggle {
@@ -93,21 +93,21 @@ const changeColorMode = (evt) => {
     width: $spacing-16;
     left: $spacing-0;
     bottom: $spacing-0;
-    background-color: $color-primary-inverse;
+    background-color: $color-base;
     -webkit-transition: $animation-speed-slow;
     transition: $animation-speed-slow;
   }
 
   & > input:checked + .slider {
-    background-color: $color-primary-inverse;
+    background-color: $color-base-inverse;
   }
 
   & > input:focus + .slider {
-    box-shadow: 0 0 1px $color-primary-inverse;
+    box-shadow: 0 0 1px $color-base;
   }
 
   & > input:checked + .slider:before {
-    background-color: $background-secondary;
+    background-color: $color-base;
     -webkit-transform: translateX($spacing-16);
     -ms-transform: translateX($spacing-16);
     transform: translateX($spacing-16);

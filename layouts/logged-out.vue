@@ -1,17 +1,16 @@
 <template>
   <nav class="logged-out-navbar">
-    Logo
-    <NavLinks />
-    <ThemeChange @change-color-mode="changeColorMode" />
-    <LocaleChange />
+    <AppLogo />
+    <div class="nav-buttons">
+      <ThemeChange @change-color-mode="changeColorMode" />
+      <LocaleChange />
+      <SignupButton />
+      <LoginButton />
+    </div>
   </nav>
 </template>
 
 <script setup>
-import LocaleChange from '~/components/locale-change/locale-change';
-import ThemeChange from '~/components/theme-change/theme-change';
-
-
 const changeColorMode = (color) => {
   const colorMode = useColorMode();
   colorMode.preference = color;
@@ -23,7 +22,14 @@ const changeColorMode = (color) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: $size-40;
-  background-color: $color-primary;
+  height: $size-60;
+  background-color: $color-primary-inverse;
+  padding: $spacing-0 $spacing-16;
+}
+
+.logged-out-navbar > .nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: $spacing-24;
 }
 </style>
