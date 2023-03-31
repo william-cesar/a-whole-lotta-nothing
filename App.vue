@@ -11,6 +11,8 @@ const layout = 'logged-out';
 </script>
 
 <style lang="scss">
+@import '~/assets/styles/main';
+
 * {
   box-sizing: border-box;
   padding: $spacing-0;
