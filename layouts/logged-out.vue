@@ -18,6 +18,8 @@ const changeColorMode = (color) => {
 </script>
 
 <style lang="scss">
+@import '@/assets/styles/main';
+
 .logged-out-navbar {
   display: flex;
   align-items: center;
