@@ -12,7 +12,7 @@
     <label
       class="toggle"
       data-testid="themeChangeToggle-label"
-      :title="isDarkModeOn ? $t('dark_mode') : $t('light_mode')"
+      :title="isDarkModeOn ? $t('navbar.dark_mode') : $t('navbar.light_mode')"
     >
       <input
         type="checkbox"
@@ -53,67 +53,68 @@ const changeColorMode = (evt) => {
 <style lang="scss">
 .theme-change-toggle {
   display: flex;
-  gap: 8px;
+  gap: $spacing-8;
 }
 
 .theme-change-toggle svg.icon > path {
-  fill: #ccc;
+  fill: $text-base-inverse;
 }
 
 .theme-change-toggle svg.icon.dark--active > path,
 .theme-change-toggle svg.icon.light--active > path {
-  fill: #41b38a;
+  fill: $color-base;
 }
 
 .theme-change-toggle > .toggle {
   position: relative;
   display: flex;
-  width: 30px;
-  height: 16px;
+  width: $size-32;
+  height: $size-16;
 
   & > input {
     opacity: 0;
-    width: 0;
-    height: 0;
+    width: $size-0;
+    height: $size-0;
   }
 
   & > .slider {
     position: absolute;
     cursor: pointer;
-    inset: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    inset: $spacing-0;
+    background-color: $color-base-inverse;
+    -webkit-transition: $animation-speed-slow;
+    transition: $animation-speed-slow;
   }
 
   & > .slider:before {
     position: absolute;
     content: "";
-    height: 16px;
-    width: 16px;
-    left: 0px;
-    bottom: 0px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    height: $spacing-16;
+    width: $spacing-16;
+    left: $spacing-0;
+    bottom: $spacing-0;
+    background-color: $color-base;
+    -webkit-transition: $animation-speed-slow;
+    transition: $animation-speed-slow;
   }
 
   & > input:checked + .slider {
-    background-color: #41b38a;
+    background-color: $color-base-inverse;
   }
 
   & > input:focus + .slider {
-    box-shadow: 0 0 1px #41b38a;
+    box-shadow: 0 0 1px $color-base;
   }
 
   & > input:checked + .slider:before {
-    -webkit-transform: translateX(14px);
-    -ms-transform: translateX(14px);
-    transform: translateX(14px);
+    background-color: $color-base;
+    -webkit-transform: translateX($spacing-16);
+    -ms-transform: translateX($spacing-16);
+    transform: translateX($spacing-16);
   }
 
   & > .slider.round {
-    border-radius: 8px;
+    border-radius: $size-8;
   }
 
   & > .slider.round:before {
