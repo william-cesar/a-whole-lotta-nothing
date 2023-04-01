@@ -8,6 +8,7 @@
       <LoginButton />
     </div>
   </nav>
+  <slot />
 </template>
 
 <script setup>

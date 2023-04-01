@@ -4,8 +4,8 @@ $screen-medium: 1023px;
 $screen-large: 1279px;
 $screen-xlarge: 1599px;
 
-
-$mediaQueryList: (
+/* --- */
+$media-query-list: (
   'screen-xsmall': (
     max-width: $screen-xsmall,
   ),
@@ -23,14 +23,14 @@ $mediaQueryList: (
   ),
 ) !default;
 
-@mixin mediaQuery($mediaQuery) {
-  $selected-media: map-get($mediaQueryList, $mediaQuery);
+@mixin media-query($media-query) {
+  $selected-media: map.get($media-query-list, $media-query);
 
   @if $selected-media {
     @media #{inspect($selected-media)} {
       @content;
     }
   } @else {
-    @error 'No value found for `#{$mediaQuery}`. Please make sure it is defined in `$mediaQuery` map.';
+    @error 'No value found for `#{$media-query}`. Please make sure it is defined in `$mediaQuery` map.';
   }
 }
