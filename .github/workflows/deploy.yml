@@ -25,11 +25,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          static_site_generator: nuxt
-
       - name: Install dependencies
         run: yarn ci
 
