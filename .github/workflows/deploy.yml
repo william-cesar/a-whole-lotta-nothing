@@ -3,7 +3,7 @@ on:
   push:
     branches: 
       - config-deploy-workflow
-permissions:
+permission:
   contents: read
   pages: write
   id-token: write
@@ -29,18 +29,17 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "16"
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
           static_site_generator: nuxt
 
-      - name: Install dependencies
-        run: yarn ci
-
       - name: Static HTML export with Nuxt
-        run: yarn generate
+        run: |
+          yarn ci
+          yarn generate
         env:
           NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL  }}
 
