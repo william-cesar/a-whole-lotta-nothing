@@ -9,7 +9,7 @@
   </NuxtLink>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .signup-button {
   padding: $spacing-8 $spacing-24;
   border-radius: $size-16;

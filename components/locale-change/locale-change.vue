@@ -23,7 +23,7 @@ const availableLocales = computed(() => {
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .locale-change-btn {
   cursor: pointer;
   background: transparent;
