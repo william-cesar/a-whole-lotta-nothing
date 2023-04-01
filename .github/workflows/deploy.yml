@@ -39,7 +39,7 @@ jobs:
             ${{ runner.os }}-nuxt-build-
 
       - name: Install dependencies
-        run: yarn ci
+        run: yarn install
 
       - name: Static HTML export with Nuxt
         run: yarn generate

@@ -3,7 +3,6 @@ import { PT_BR } from './languages/pt-BR';
 import { EN_US } from './languages/en-US';
 
 export default defineNuxtConfig({
-  ssr: false,
   app: {
     head: {
       title: 'A Whole Lotta Nothing',
