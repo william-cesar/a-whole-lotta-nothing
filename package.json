@@ -11,7 +11,8 @@
     "ci": "yarn install --frozen-lockfile",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "gh-pages -d dist && yarn generate"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
@@ -19,6 +20,7 @@
     "@nuxtjs/eslint-module": "^4.0.2",
     "@nuxtjs/i18n": "^8.0.0-beta.10",
     "eslint": "^8.37.0",
+    "gh-pages": "^5.0.0",
     "nuxt": "^3.3.2",
     "nuxt-icon": "^0.3.3",
     "sass": "^1.60.0",
