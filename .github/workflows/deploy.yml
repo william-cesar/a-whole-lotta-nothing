@@ -2,7 +2,7 @@ name: Deploy Nuxt site to Pages
 on:
   push:
     branches:
-      - config-deploy-workflow
+      - main
 permissions:
   contents: read
   pages: write
