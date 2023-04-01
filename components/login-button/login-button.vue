@@ -9,7 +9,7 @@
   </NuxtLink>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .login-button {
   padding: $spacing-8 $spacing-24;
   border-radius: $size-16;

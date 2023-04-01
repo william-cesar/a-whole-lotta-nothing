@@ -19,7 +19,7 @@
   </nuxtlink>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $line-height-low: 75%;
 
 .app-logo {

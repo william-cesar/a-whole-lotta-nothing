@@ -50,7 +50,7 @@ const changeColorMode = (evt) => {
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .theme-change-toggle {
   display: flex;
   gap: $spacing-8;
