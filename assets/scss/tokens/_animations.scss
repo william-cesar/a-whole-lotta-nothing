@@ -1,12 +1,12 @@
-// :root {
-//   --animation-type-dissolve: ease;
-//   --animation-speed-slow: 300ms;
-//   --animation-speed-medium: 225ms;
-//   --animation-speed-high: 150ms;
-// }
+:root {
+  --animation-type-dissolve: ease;
+  --animation-speed-slow: 300ms;
+  --animation-speed-medium: 225ms;
+  --animation-speed-high: 150ms;
+}
 
 
-$animation-type-dissolve: ease;
-$animation-speed-slow: 300ms;
-$animation-speed-medium: 225ms;
-$animation-speed-high: 150ms;
+$animation-type-dissolve: var(--animation-type-dissolve);
+$animation-speed-slow: var(--animation-speed-slow);
+$animation-speed-medium: var(--animation-speed-medium);
+$animation-speed-high: var(--animation-speed-high);

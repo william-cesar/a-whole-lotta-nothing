@@ -17,3 +17,20 @@ const changeColorMode = (color) => {
   colorMode.preference = color;
 }
 </script>
+
+<style lang="scss">
+.logged-out-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $size-60;
+  background-color: $color-primary-inverse;
+  padding: $spacing-0 $spacing-16;
+}
+
+.logged-out-navbar > .nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: $spacing-24;
+}
+</style>
