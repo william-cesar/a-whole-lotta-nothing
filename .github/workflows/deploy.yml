@@ -14,18 +14,23 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16]
+    # strategy:
+    #   matrix:
+    #     node-version: [16]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+      # - name: Use Node.js ${{ matrix.node-version }}
+      # uses: actions/setup-node@v3
+      # with:
+      #   node-version: ${{ matrix.node-version }}
       
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
