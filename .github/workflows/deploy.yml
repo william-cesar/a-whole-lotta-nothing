@@ -2,7 +2,7 @@ name: Build and Deploy
 on: 
   push:
     branches:
-      - main
+      - config-deploy-workflow
 permissions:
   contents: write
 jobs:
