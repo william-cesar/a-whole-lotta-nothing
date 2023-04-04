@@ -5,7 +5,11 @@ export const EN_US = {
     dark_mode: 'Dark mode',
     light_mode: 'Light mode',
     about: 'About',
-    signup: 'Signup',
+    signup: 'Sign up',
     login: 'Log in',
+  },
+  form: {
+    toggle_off: 'Hide password',
+    toggle_on: 'Show password',
   }
 }

@@ -7,5 +7,9 @@ export const PT_BR = {
     about: 'Sobre',
     signup: 'Inscrever',
     login: 'Entrar',
+  },
+  form: {
+    toggle_off: 'Esconder senha',
+    toggle_on: 'Visualizar senha',
   }
 }
